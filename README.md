@@ -35,8 +35,7 @@ steps:
 - `ubuntu-latest` (`X64`, `ARM64`)
 - `windows-latest` (`X64`, `ARM64`)
 - `macos-latest` (`ARM64`)
-
-`x86_64-macos` is not available from anyzig releases. Intel Mac runners (for example `macos-13`) are not supported.
+- `macos-15-intel` (`X64`)
 
 ## Local Testing with `act`
 
