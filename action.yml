@@ -38,9 +38,12 @@ runs:
           "macOS-ARM64")
             asset="anyzig-aarch64-macos.tar.gz"
             ;;
+          "macOS-X64")
+            asset="anyzig-x86_64-macos.tar.gz"
+            ;;
           *)
             echo "Unsupported platform: runner.os=${{ runner.os }}, runner.arch=${{ runner.arch }}" >&2
-            echo "Supported platforms: Linux/X64, Linux/ARM64, macOS/ARM64, Windows/X64, Windows/ARM64" >&2
+            echo "Supported platforms: Linux/X64, Linux/ARM64, macOS/X64, macOS/ARM64, Windows/X64, Windows/ARM64" >&2
             exit 1
             ;;
         esac
@@ -68,7 +71,7 @@ runs:
           "Windows-X64" { "anyzig-x86_64-windows.zip" }
           "Windows-ARM64" { "anyzig-aarch64-windows.zip" }
           default {
-            throw "Unsupported platform: runner.os=${{ runner.os }}, runner.arch=${{ runner.arch }}. Supported platforms: Linux/X64, Linux/ARM64, macOS/ARM64, Windows/X64, Windows/ARM64"
+            throw "Unsupported platform: runner.os=${{ runner.os }}, runner.arch=${{ runner.arch }}. Supported platforms: Linux/X64, Linux/ARM64, macOS/X64, macOS/ARM64, Windows/X64, Windows/ARM64"
           }
         }
 
